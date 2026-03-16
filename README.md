@@ -1,42 +1,83 @@
-TELLİ RAFLAR KÜTÜPHANE OTOMASYONU
+# 📚 Telli Raflar — Library Management System (C#)
 
-Bu proje, modern yazılım mimarisi prensipleri ve Yapay Zeka (AI) destekli geliştirme süreçleri ile inşa edilmiş, kapsamlı bir kütüphane yönetim sistemidir. Bir Yönetim Bilişim Sistemleri (MIS) öğrencisi olarak, işletme mantığını teknik mükemmeliyetle birleştirmeyi hedefledim.
+A comprehensive library automation system built with C# and Object-Oriented 
+Programming principles. Developed with AI-assisted code review (Gemini AI) 
+as a technical consultant throughout the process.
 
-Geliştirme Süreci ve Yapay Zeka İşbirliği
-Bu projenin geliştirilme sürecinde, Gemini AI ile interaktif bir işbirliği yapılmıştır. Yapay zeka, bir kod üreticisinden ziyade bir teknik danışman ve kod denetçisi (Code Reviewer) olarak konumlandırılmıştır.
+---
 
-Problem Çözme: Karmaşık "Scope" (Kapsam) hataları ve "Inheritance" (Kalıtım) krizleri, AI ile yapılan teknik diyaloglar sayesinde optimize edilmiştir.
+## ✨ Features
 
-Mimari Kararlar: Nesne yönelimli mimarinin kurulması, veri tiplerinin standardizasyonu ve "Session" (Oturum) mantığının simüle edilmesinde yapay zeka asistanından profesyonel destek alınmıştır.
+- 👥 **Membership Tiers** — Silver, Gold, Diamond with different privileges
+- 📖 **Smart Borrowing System** — Auto-calculates return dates based on membership type
+- 💰 **Balance Management** — Real-time member balance and transaction tracking
+- 📦 **Inventory Management** — Add books and magazines via donation system
+- 🔐 **Session Simulation** — Dynamic user profile with recent transactions
+- 🛡️ **Defensive Programming** — Try-catch blocks prevent all invalid inputs
 
-Öne Çıkan Yetenekler ve Teknik Yetkinlikler
-Bu projeyi hayata geçirirken sergilenen ve portfolyomun temelini oluşturan yetkinlikler şunlardır:
+---
 
-1. Nesne Yönelimli Programlama (OOP)
-Kalıtım (Inheritance): GumusUye, AltinUye ve ElmasUye sınıfları üzerinden hiyerarşik bir yapı kurularak kod tekrarı önlenmiştir.
+## 🏗️ Architecture & OOP Concepts
 
-Polimorfizm (Çok Biçimlilik): Farklı üyelik tipleri için özelleştirilmiş uyelikucretia() gibi metotlar sayesinde esnek bir yapı sağlanmıştır.
+| Concept | Implementation |
+|--------|---------------|
+| **Inheritance** | `GumusUye` → `AltinUye` → `ElmasUye` hierarchy |
+| **Polymorphism** | Overridden `uyelikUcreti()` per membership type |
+| **One-to-Many** | Member ↔ BorrowedBooks relationship |
+| **Encapsulation** | Private fields with controlled access methods |
 
-Nesne İlişkileri: Üyeler ve ödünç alınan kitaplar arasında "Bire Çok" (One-to-Many) ilişkisi kurgulanarak veri tutarlılığı korunmuştur.
+---
 
-2. Algoritma Tasarımı ve Veri Yönetimi
-Dinamik Veri Yapıları: List<T> yapıları kullanılarak kitaplar ve üyeler gerçek zamanlı olarak yönetilmiştir.
+## 🛠️ Tech Stack
 
-Hata Yönetimi (Defensive Programming): try-catch blokları ve int.TryParse yöntemleri ile kullanıcı hatalarına karşı dirençli, güvenli bir sistem tasarlanmıştır.
+- **Language:** C#
+- **Platform:** .NET Console Application
+- **AI Assisted:** Gemini AI (Code Review & Architecture)
+- **IDE:** Visual Studio
 
-3. İş Mantığı ve Sistem Analizi
-Durum Yönetimi: Kitapların ödünç alınma durumları ve üye bakiyeleri arasındaki ilişki, gerçek bir işletme otomasyonu hassasiyetinde kurgulanmıştır.
+---
 
-Kullanıcı Deneyimi (UX): Karmaşık teknik süreçler, duru bir Türkçe ve anlaşılır bir menü yapısı ile kullanıcıya sunulmuştur.
+## 🚀 How to Run
 
-Proje Özellikleri
-Akıllı Ödünç Sistemi: Üyelik tipine göre teslim tarihlerini otomatik hesaplayan DateTime mimarisi.
+1. Clone the repository
+```bash
+git clone https://github.com/arda-portakalkoku/Telli-Raflar-Kutuphane-Otomasyonu.git
+```
+2. Open in Visual Studio
+3. ⚠️ **Main class is located inside `UyelikSecenekleri` folder**
+4. Run the project (F5)
 
-Dinamik Profil: Kullanıcının en son işlemlerini, bakiyesini ve sahip olduğu kitapları gösteren oturum yönetimi.
+---
 
-Envanter Yönetimi: Kütüphane envanterine kitap ve dergi eklemeye yönelik nesne tabanlı bağış fonksiyonu.
+## 💡 What Makes This Project Special
 
-İletişim
-Yazılım geliştirme süreçlerine olan tutkum ve AI destekli modern yaklaşımlarım hakkında daha fazla bilgi almak için portfolyomu inceleyebilirsiniz.
+This project was built not just to write code, but to simulate a **real 
+business system.** Every feature reflects an actual library workflow — 
+from membership upgrades to overdue tracking.
 
-NOT: MAIN CLASS UYELİKSECENEKLERİ KLASÖRÜNÜN İÇİNDEDİR.
+Using AI as a **code reviewer** (not a code generator) helped me understand
+architectural decisions at a deeper level.
+
+---
+
+## 📂 Project Structure
+```
+Telli-Raflar/
+│
+├── UyelikSecenekleri/    ← Main class here
+│   ├── Program.cs
+│   ├── GumusUye.cs
+│   ├── AltinUye.cs
+│   └── ElmasUye.cs
+│
+└── README.md
+```
+
+---
+
+## 👨‍💻 Author
+
+**Arda Portakalkökü** — MIS Student & Developer  
+🌐 [Portfolio](http://ardaportakalkoku.com) · 
+📝 [Blog](https://ardacodes.blogspot.com) · 
+💼 [LinkedIn](https://www.linkedin.com/in/arda-portakalkökü-1020472b4)
